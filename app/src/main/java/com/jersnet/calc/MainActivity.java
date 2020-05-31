@@ -100,12 +100,19 @@ public class MainActivity extends Activity implements View.OnClickListener
 		} else if(view == button_ac) {
 			edittext.setText(null);
 		} else if(view == button_eq) {
-			String tmp = edittext.getText().toString();
-				tmp = tmp.replace("x","*");
-		        edittext.setText(String.valueOf(eval(tmp)));
+			   // store temporary appended data fromt this variables
+			    String tmp = edittext.getText().toString().trim();
+				
+				// replace x to * inorder to evaluate the expression
+				String tmpx = tmp.replace("x","*");
+				
+				// set to input the final result and the appended data
+		        edittext.setText(tmp + " = " + String.valueOf(eval(tmpx)));
 		}
 	}
 	
+	
+	// This is the code evaluate the expression, this is just like javascript eval()
 	public static double eval(final String str) {
 		return new Object() {
 			int pos = -1, ch;
