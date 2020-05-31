@@ -104,10 +104,10 @@ public class MainActivity extends Activity implements View.OnClickListener
 			    String tmp = edittext.getText().toString().trim();
 				
 				// replace x to * inorder to evaluate the expression
-				String tmpx = tmp.replace("x","*");
+			    String tmpx = tmp.replace("x","*");
 				
 				// set to input the final result and the appended data
-		        edittext.setText(tmp + " = " + String.valueOf(eval(tmpx)));
+		            edittext.setText(tmp + " = " + String.valueOf(eval(tmpx)));
 		}
 	}
 	
