@@ -101,11 +101,8 @@ public class MainActivity extends Activity implements View.OnClickListener
 			edittext.setText(null);
 		} else if(view == button_eq) {
 			String tmp = edittext.getText().toString();
-			
-			if(tmp.contains("x")) {
 				tmp = tmp.replace("x","*");
 		        edittext.setText(String.valueOf(eval(tmp)));
-			}
 		}
 	}
 	
